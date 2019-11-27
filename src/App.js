@@ -1,9 +1,8 @@
 
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import $ from "jquery"
+
 
 // Wouldn't it be better to use react-bootstrap-sidebar
 import cat from './imgs/cat.png';
