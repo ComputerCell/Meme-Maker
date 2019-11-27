@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 // Wouldn't it be better to use react-bootstrap-sidebar
+// As of now the navbar ain't working. FIX IT
+
 import cat from './imgs/cat.png';
 import grumpy_cat from './imgs/grumpy-cat.jpg';
 import doge from './imgs/doge.jpg';
@@ -16,8 +18,6 @@ function App() {
   return (
     <div className="Meme Maker">
       <header className="App-header">
-        {window.pageXOffset}
-        {window.pageYOffset}
 
         <div className="container-fluid">
           <div className="row">
