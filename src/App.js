@@ -2,19 +2,27 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import axios from 'axios';
 
 // Wouldn't it be better to use react-bootstrap-sidebar
 // As of now the navbar ain't working. FIX IT
+
 
 import cat from './imgs/cat.png';
 import grumpy_cat from './imgs/grumpy-cat.jpg';
 import doge from './imgs/doge.jpg';
 
-const imgs = [cat, grumpy_cat, doge, cat, grumpy_cat, doge,cat, grumpy_cat, doge,cat, grumpy_cat, doge];
+// const memes = axios.get('./memes.json')
+// // const memes = JSON.parse(img_json);
+// alert(memes.Cat);
+
+const names =["Cat", "Grumpy Cat", "Doge"];
+const imgs = [cat, grumpy_cat, doge];
+
 
 
 function App() {
+
   return (
     <div className="Meme Maker">
       <header className="App-header">
@@ -34,7 +42,7 @@ function App() {
                   <a className="nav-link" href="#">Popular</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link disabled" href="#">Contact</a>
+                  <a className="nav-link" href="#">Contact</a>
                 </li>
 
               </ul>
@@ -48,15 +56,15 @@ function App() {
                 {imgs.map((value, index) => {
                   return <div className="col-md-4">
                     <div className="card">
-                    <img className="card-img-top" alt="{index}" src={value} />
+                    <img className="card-img-top" alt="{names[index]}" src={value} />
                     <div className="card-block">
                       <h5 className="text">
-                        {index}
+                        {names[index]}
                       </h5>
-
+                      
                       <p>
                         <a className="btn btn-primary" href="#">Make Meme</a>
-                        <a className="btn" href="#">Generate</a>
+                        <a className="btn" href="#">Download</a>
                       </p>
                     </div>
                   </div>
