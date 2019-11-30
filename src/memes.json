@@ -1,5 +1,14 @@
-{
-    "Cat":"src/cat.png",
-    "Doge":"doge.png",
-    "Grumpy Cat":"grumpy-cat.png"
-}
+
+[ 
+    
+    {
+        "id": 1,
+        "title": "Cat",
+        "img": "./imgs/cat.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Dog",
+        "img": "./imgs/doge.jpg"
+    }
+]
