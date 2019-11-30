@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './css/home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import meme from '../memes.json'
+import {DISHES} from '../memes.js'
 import Header from './header'
 class Home extends Component {
   render() {
-    let rows = meme.map((value, index) => {
+    let rows = DISHES.map((value, index) => {
       return <div className="col-md-4">
         <div className="card">
           <img className="card-img-top" alt="{names[index]}" src={value.img} />
