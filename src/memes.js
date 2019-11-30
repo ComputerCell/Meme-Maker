@@ -8,7 +8,7 @@ export const DISHES = [
     },
     {
         id: 2,
-        title: "Dog",
+        title: "kid",
         img: require('./imgs/doge.jpg')
     },
     {
