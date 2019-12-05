@@ -3,11 +3,11 @@ import './css/home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { DISHES } from '../memes.js'
 import Header from './header'
-import CardMedia from '@material-ui/core/CardMedia';
-import { withStyles } from '@material-ui/core/styles';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import { Card, CardContent } from "@material-ui/core";
-import Textedit from './Textedit';
+// import CardMedia from '@material-ui/core/CardMedia';
+// import { withStyles } from '@material-ui/core/styles';
+// import CardActionArea from '@material-ui/core/CardActionArea';
+// import { Card, CardContent } from "@material-ui/core";
+// import Textedit from './Textedit';
 import {Link} from 'react-router-dom';
 
 
@@ -27,17 +27,17 @@ class Home extends Component {
   render() {
 
 
-    let rows = DISHES.map((value, index) => {
+   const rows = DISHES.map((value, index) => {
        return       <div className="col-md-4">
        <div className="card">
-         <img className="card-img-top" alt="{names[index]}" src={value.img} />
+         <img className="card-img-top" alt={"{names[index]}"} src={value.img} />
          {/* <Textedit/> */}
          <div className="card-block">
            <h5 className="text">
              {value.title}
            </h5>
         < div>
-             <Link className="btn btn-primary" to="/textedit">Make Meme</Link>
+             <Link className="btn btn-primary" to={`./textedit/${value.id}`}>Make Meme</Link>
              <Link className="btn" to="#">Download</Link>
              </div>
          </div>
